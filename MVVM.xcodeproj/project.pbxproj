@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32315DD627E5256200FD5DC1 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315DD527E5256200FD5DC1 /* CourseDetailsViewController.swift */; };
+		32315DD827E525BA00FD5DC1 /* CourseDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315DD727E525BA00FD5DC1 /* CourseDetailsViewModel.swift */; };
 		32943B8C27DB68FD007F22FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32943B8B27DB68FD007F22FC /* AppDelegate.swift */; };
 		32943B8E27DB68FD007F22FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32943B8D27DB68FD007F22FC /* SceneDelegate.swift */; };
 		32943B9027DB68FD007F22FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32943B8F27DB68FD007F22FC /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		32315DD527E5256200FD5DC1 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
+		32315DD727E525BA00FD5DC1 /* CourseDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewModel.swift; sourceTree = "<group>"; };
 		32943B8827DB68FD007F22FC /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32943B8B27DB68FD007F22FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32943B8D27DB68FD007F22FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				32315DD527E5256200FD5DC1 /* CourseDetailsViewController.swift */,
+				32315DD727E525BA00FD5DC1 /* CourseDetailsViewModel.swift */,
 			);
 			path = CourseDetails;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32315DD827E525BA00FD5DC1 /* CourseDetailsViewModel.swift in Sources */,
 				32943B9027DB68FD007F22FC /* ViewController.swift in Sources */,
 				32943B8C27DB68FD007F22FC /* AppDelegate.swift in Sources */,
 				32315DD627E5256200FD5DC1 /* CourseDetailsViewController.swift in Sources */,
