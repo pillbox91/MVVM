@@ -13,5 +13,7 @@ protocol CourseDetailsViewModelProtocol {
 }
 
 class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
+    var courseName: String
+    
     
 }
