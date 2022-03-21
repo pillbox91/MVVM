@@ -15,7 +15,9 @@ class CourseListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.rowHeight = 100
+        setupNavigationBar()
+        getCourses()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -11,12 +11,12 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    private let courseURL = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
+    private let coursesURL = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
     
     private init() {}
     
     func fetchData(completion: @escaping (_ courses: [Course]) -> Void) {
-        guard let url = URL(string: courseURL) else {return}
+        guard let url = URL(string: coursesURL) else {return}
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else {return}
