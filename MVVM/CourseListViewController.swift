@@ -8,7 +8,7 @@
 import UIKit
 
 class CourseListViewController: UIViewController {
-
+    
     @IBOutlet private var tableView: UITableView!
     
     private var courses: [Course] = []
@@ -29,7 +29,7 @@ class CourseListViewController: UIViewController {
         NetworkManager.shared.fetchData() { courses in
             self.courses = courses
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+            self.tableView.reloadData()
             }
         }
     }
