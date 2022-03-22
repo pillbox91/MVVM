@@ -19,7 +19,7 @@ class CourseListViewController: UIViewController {
         setupNavigationBar()
         getCourses()
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailVC = segue.destination as! CourseDetailsViewController
         detailVC.course = sender as? Course
@@ -29,7 +29,7 @@ class CourseListViewController: UIViewController {
         NetworkManager.shared.fetchData() { courses in
             self.courses = courses
             DispatchQueue.main.async {
-            self.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }

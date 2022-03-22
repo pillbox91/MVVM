@@ -15,7 +15,7 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchData(completion: @escaping (_ courses: [Course])->()) {
+    func fetchData(completion: @escaping (_ courses: [Course]) -> Void) {
         guard let url = URL(string: coursesURL) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
@@ -25,9 +25,7 @@ class NetworkManager {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let courses = try decoder.decode([Course].self, from: data)
-                DispatchQueue.main.async {
-                    completion(courses)
-                }
+                completion(courses)
             } catch let error {
                 print("Error serialization json", error)
             }
