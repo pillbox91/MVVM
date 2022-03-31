@@ -58,6 +58,58 @@
 			path = CourseDetails;
 			sourceTree = "<group>";
 		};
+		32315DE527F645AE00FD5DC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				32315DE127E8B8A200FD5DC1 /* Course.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		32315DE627F645C500FD5DC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32315DDD27E8B64500FD5DC1 /* CourseTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32315DE727F645E100FD5DC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				32315DDF27E8B6F800FD5DC1 /* NetworkManager.swift */,
+				32315DE327E8B92C00FD5DC1 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		32315DE827F645EA00FD5DC1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				32315DDB27E8B0E800FD5DC1 /* Main.storyboard */,
+				32943B9627DB68FF007F22FC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		32315DE927F6460B00FD5DC1 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				32943B8B27DB68FD007F22FC /* AppDelegate.swift */,
+				32943B8D27DB68FD007F22FC /* SceneDelegate.swift */,
+				32943B9927DB68FF007F22FC /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		32315DEA27F6462100FD5DC1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32943B9427DB68FF007F22FC /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		32943B7F27DB68FD007F22FC = {
 			isa = PBXGroup;
 			children = (
@@ -78,17 +130,13 @@
 			isa = PBXGroup;
 			children = (
 				32315DD427E524FD00FD5DC1 /* CourseDetails */,
-				32943B8B27DB68FD007F22FC /* AppDelegate.swift */,
 				32315DD927E8AD4A00FD5DC1 /* CourseListViewController.swift */,
-				32315DE327E8B92C00FD5DC1 /* DataManager.swift */,
-				32315DDD27E8B64500FD5DC1 /* CourseTableViewCell.swift */,
-				32315DDF27E8B6F800FD5DC1 /* NetworkManager.swift */,
-				32315DE127E8B8A200FD5DC1 /* Course.swift */,
-				32943B8D27DB68FD007F22FC /* SceneDelegate.swift */,
-				32943B9427DB68FF007F22FC /* Assets.xcassets */,
-				32315DDB27E8B0E800FD5DC1 /* Main.storyboard */,
-				32943B9627DB68FF007F22FC /* LaunchScreen.storyboard */,
-				32943B9927DB68FF007F22FC /* Info.plist */,
+				32315DE527F645AE00FD5DC1 /* Models */,
+				32315DE627F645C500FD5DC1 /* Views */,
+				32315DEA27F6462100FD5DC1 /* Sources */,
+				32315DE827F645EA00FD5DC1 /* Storyboards */,
+				32315DE727F645E100FD5DC1 /* Services */,
+				32315DE927F6460B00FD5DC1 /* SupportingFiles */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -315,7 +363,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q56H3JNA98;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MVVM/Info.plist;
+				INFOPLIST_FILE = MVVM/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -344,7 +392,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q56H3JNA98;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MVVM/Info.plist;
+				INFOPLIST_FILE = MVVM/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
