@@ -12,8 +12,8 @@ protocol CourseDetailsViewModelProtocol {
     init(course: Course)
 }
 
-//class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
-//    var courseName: String
-//    
-//    
-//}
+class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
+    var courseName: String
+    
+    
+}

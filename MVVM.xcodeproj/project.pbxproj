@@ -110,6 +110,14 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		32315DEB27F6471300FD5DC1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				32315DD927E8AD4A00FD5DC1 /* CourseListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		32943B7F27DB68FD007F22FC = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				32315DD427E524FD00FD5DC1 /* CourseDetails */,
-				32315DD927E8AD4A00FD5DC1 /* CourseListViewController.swift */,
+				32315DEB27F6471300FD5DC1 /* ViewControllers */,
 				32315DE527F645AE00FD5DC1 /* Models */,
 				32315DE627F645C500FD5DC1 /* Views */,
 				32315DEA27F6462100FD5DC1 /* Sources */,
