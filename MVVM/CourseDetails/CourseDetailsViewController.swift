@@ -16,12 +16,19 @@ class CourseDetailsViewController: UIViewController {
     @IBOutlet weak var favoriteButton: UIButton!
     
     var course: Course!
-    var viewModel: CourseDetailsViewModelProtocol!
+    var viewModel: CourseDetailsViewModelProtocol! {
+        didSet {
+            self.courseNameLabel.text = viewModel.courseName
+            self.numberOfLessonsLabel.text = viewModel.numberOfLessons
+            self.numberOfTestsLabel.text = viewModel.numberOfTests
+        }
+    }
     
     private var isFavorite = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = CourseDetailsViewModel(course: course)
         loadFavoriteStatus()
         setupUI()
     }
@@ -34,10 +41,6 @@ class CourseDetailsViewController: UIViewController {
     }
     
     private func setupUI() {
-        courseNameLabel.text = course.name
-        numberOfLessonsLabel.text = "Number of lessons: \(course.numberOfLessons ?? 0)"
-        numberOfTestsLabel.text = "Number of tests: \(course.numberOfTests ?? 0)"
-        
         guard let stringURL = course.imageUrl else {return}
         guard let imageURL = URL(string: stringURL) else {return}
         guard let imageData = try? Data(contentsOf: imageURL) else {return}
