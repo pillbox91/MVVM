@@ -13,7 +13,13 @@ protocol CourseDetailsViewModelProtocol {
 }
 
 class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
-    var courseName: String
+    var courseName: String {
+        course.name ?? ""
+    }
     
+    private let course: Course
     
+    required init(course: Course) {
+        self.course = course
+    }
 }

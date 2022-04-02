@@ -16,6 +16,7 @@ class CourseDetailsViewController: UIViewController {
     @IBOutlet weak var favoriteButton: UIButton!
     
     var course: Course!
+    var viewModel: CourseDetailsViewModelProtocol!
     
     private var isFavorite = false
 
