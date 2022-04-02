@@ -12,6 +12,7 @@ protocol CourseDetailsViewModelProtocol {
     var numberOfLessons: String { get }
     var numberOfTests: String { get }
     var imageData: Data? { get }
+    var isFavorite: Bool { get set }
     init(course: Course)
 }
 
@@ -30,6 +31,14 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
     
     var imageData: Data? {
         getImage()
+    }
+    
+    var isFavorite: Bool {
+        get {
+            DataManager.shared.loadFavoriteStatus(for: course.name ?? "")
+        } set {
+            DataManager.shared.saveFavoriteStatus(for: course.name ?? "", with: newValue)
+        }
     }
     
     private let course: Course

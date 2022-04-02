@@ -27,20 +27,15 @@ class CourseDetailsViewController: UIViewController {
         }
     }
     
-    private var isFavorite = false
-
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = CourseDetailsViewModel(course: course)
-        loadFavoriteStatus()
         setupUI()
     }
     
-    
     @IBAction func toggleFavorite(_ sender: UIButton) {
-        isFavorite.toggle()
+        viewModel.isFavorite.toggle()
         setImageForFavoriteButton()
-        DataManager.shared.saveFavoriteStatus(for: course.name ?? "", with: isFavorite)
     }
     
     private func setupUI() {
@@ -48,10 +43,6 @@ class CourseDetailsViewController: UIViewController {
     }
 
     private func setImageForFavoriteButton() {
-        favoriteButton.tintColor = isFavorite ? .red : .gray
-    }
-    
-    private func loadFavoriteStatus() {
-        isFavorite = DataManager.shared.loadFavoriteStatus(for: course.name ?? "")
+        favoriteButton.tintColor = viewModel.isFavorite ? .red : .gray
     }
 }
