@@ -21,6 +21,9 @@ class CourseDetailsViewController: UIViewController {
             self.courseNameLabel.text = viewModel.courseName
             self.numberOfLessonsLabel.text = viewModel.numberOfLessons
             self.numberOfTestsLabel.text = viewModel.numberOfTests
+            
+            guard let imageData = viewModel.imageData else {return}
+            courseImage.image = UIImage(data: imageData)
         }
     }
     
@@ -41,11 +44,6 @@ class CourseDetailsViewController: UIViewController {
     }
     
     private func setupUI() {
-        guard let stringURL = course.imageUrl else {return}
-        guard let imageURL = URL(string: stringURL) else {return}
-        guard let imageData = try? Data(contentsOf: imageURL) else {return}
-        courseImage.image = UIImage(data: imageData)
-        
         setImageForFavoriteButton()
     }
 
