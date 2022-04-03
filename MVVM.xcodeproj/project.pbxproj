@@ -15,6 +15,7 @@
 		32315DE027E8B6F800FD5DC1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315DDF27E8B6F800FD5DC1 /* NetworkManager.swift */; };
 		32315DE227E8B8A200FD5DC1 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315DE127E8B8A200FD5DC1 /* Course.swift */; };
 		32315DE427E8B92C00FD5DC1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315DE327E8B92C00FD5DC1 /* DataManager.swift */; };
+		32315DEE27F83EFD00FD5DC1 /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315DED27F83EFD00FD5DC1 /* CourseListViewModel.swift */; };
 		32943B8C27DB68FD007F22FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32943B8B27DB68FD007F22FC /* AppDelegate.swift */; };
 		32943B8E27DB68FD007F22FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32943B8D27DB68FD007F22FC /* SceneDelegate.swift */; };
 		32943B9527DB68FF007F22FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32943B9427DB68FF007F22FC /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		32315DDF27E8B6F800FD5DC1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		32315DE127E8B8A200FD5DC1 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		32315DE327E8B92C00FD5DC1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		32315DED27F83EFD00FD5DC1 /* CourseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
 		32943B8827DB68FD007F22FC /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32943B8B27DB68FD007F22FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32943B8D27DB68FD007F22FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,9 +115,17 @@
 		32315DEB27F6471300FD5DC1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				32315DD927E8AD4A00FD5DC1 /* CourseListViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		32315DEC27F83EA300FD5DC1 /* CourseList */ = {
+			isa = PBXGroup;
+			children = (
+				32315DD927E8AD4A00FD5DC1 /* CourseListViewController.swift */,
+				32315DED27F83EFD00FD5DC1 /* CourseListViewModel.swift */,
+			);
+			path = CourseList;
 			sourceTree = "<group>";
 		};
 		32943B7F27DB68FD007F22FC = {
@@ -137,6 +147,7 @@
 		32943B8A27DB68FD007F22FC /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				32315DEC27F83EA300FD5DC1 /* CourseList */,
 				32315DD427E524FD00FD5DC1 /* CourseDetails */,
 				32315DEB27F6471300FD5DC1 /* ViewControllers */,
 				32315DE527F645AE00FD5DC1 /* Models */,
@@ -221,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32315DE227E8B8A200FD5DC1 /* Course.swift in Sources */,
+				32315DEE27F83EFD00FD5DC1 /* CourseListViewModel.swift in Sources */,
 				32315DD827E525BA00FD5DC1 /* CourseDetailsViewModel.swift in Sources */,
 				32315DDA27E8AD4A00FD5DC1 /* CourseListViewController.swift in Sources */,
 				32315DDE27E8B64500FD5DC1 /* CourseTableViewCell.swift in Sources */,
