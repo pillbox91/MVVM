@@ -12,8 +12,11 @@ protocol CourseDetailsViewModelProtocol {
     var numberOfLessons: String { get }
     var numberOfTests: String { get }
     var imageData: Data? { get }
-    var isFavorite: Bool { get set }
+    var isFavorite: Bool { get }
+    var viewModelDidChange: ((CourseDetailsViewModelProtocol) -> Void)? { get set }
     init(course: Course)
+    func setFavoriteStatus()
+    func changeFavoriteStatus()
 }
 
 class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
@@ -33,11 +36,12 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
         ImageManager.shared.getImage(from: course.imageUrl)
     }
     
+    var viewModelDidChange: ((CourseDetailsViewModelProtocol) -> Void)?
+
+    
     var isFavorite: Bool {
-        get {
-            DataManager.shared.loadFavoriteStatus(for: course.name ?? "")
-        } set {
-            DataManager.shared.saveFavoriteStatus(for: course.name ?? "", with: newValue)
+        didSet {
+            viewModelDidChange?(self)
         }
     }
     
@@ -45,5 +49,15 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
     
     required init(course: Course) {
         self.course = course
+        isFavorite = false
+    }
+    
+    func setFavoriteStatus() {
+        isFavorite = DataManager.shared.loadFavoriteStatus(for: course.name ?? "")
+    }
+    
+    func changeFavoriteStatus() {
+        isFavorite.toggle()
+        DataManager.shared.saveFavoriteStatus(for: course.name ?? "", with: isFavorite)
     }
 }

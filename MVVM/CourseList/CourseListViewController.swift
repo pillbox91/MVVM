@@ -28,7 +28,7 @@ class CourseListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailVC = segue.destination as! CourseDetailsViewController
-        detailVC.course = sender as? Course
+        detailVC.viewModel = sender as? CourseDetailsViewModelProtocol
     }
 
     
@@ -65,7 +65,7 @@ extension CourseListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let course = viewModel.courses[indexPath.row]
-        performSegue(withIdentifier: "ShowDetails", sender: course)
+        let courseDetailsVM = viewModel.viewModelForSelectedRow(at: indexPath)
+        performSegue(withIdentifier: "ShowDetails", sender: courseDetailsVM)
     }
 }
