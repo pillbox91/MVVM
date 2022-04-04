@@ -52,10 +52,9 @@ extension CourseListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell",
-                                                 for: indexPath) as! CourseTableViewCell
-        let course = viewModel.courses[indexPath.row]
-        cell.configure(with: course)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell", for: indexPath) as! CourseTableViewCell
+        let cellViewModel = viewModel.cellViewModel(at: indexPath)
+        cell.viewModel = cellViewModel
         
         return cell
     }

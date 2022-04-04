@@ -11,6 +11,7 @@ protocol CourseListViewModelProtocol {
     var courses: [Course] {get}
     func fetchCourses(completion: @escaping() -> Void)
     func numberOfRows() -> Int
+    func cellViewModel(at indexPath: IndexPath) -> CourseTableViewCellViewModelProtocol?
 }
 
 class CourseListViewModel: CourseListViewModelProtocol {
@@ -27,5 +28,10 @@ class CourseListViewModel: CourseListViewModelProtocol {
     
     func numberOfRows() -> Int {
         courses.count
+    }
+    
+    func cellViewModel(at indexPath: IndexPath) -> CourseTableViewCellViewModelProtocol? {
+        let course = courses[indexPath.row]
+        return CourseTableViewCellViewModel(course: course)
     }
 }
