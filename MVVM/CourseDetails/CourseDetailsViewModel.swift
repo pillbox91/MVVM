@@ -30,7 +30,7 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
     }
     
     var imageData: Data? {
-        getImage()
+        ImageManager.shared.getImage(from: course.imageUrl)
     }
     
     var isFavorite: Bool {
@@ -45,12 +45,5 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
     
     required init(course: Course) {
         self.course = course
-    }
-    
-    private func getImage() -> Data? {
-        guard let stringURL = course.imageUrl else {return nil}
-        guard let imageURL = URL(string: stringURL) else {return nil}
-        guard let imageData = try? Data(contentsOf: imageURL) else {return nil}
-        return imageData
     }
 }
