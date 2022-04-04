@@ -12,10 +12,14 @@ protocol CourseListViewModelProtocol {
     func fetchCourses(completion: @escaping() -> Void)
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> CourseTableViewCellViewModelProtocol?
+    func selectRow(at indexPath: IndexPath)
+    func viewModelForSelectedRow() -> CourseDetailsViewModelProtocol?
 }
 
 class CourseListViewModel: CourseListViewModelProtocol {
     var courses: [Course] = []
+    
+    private var indexPath: IndexPath?
     
     func fetchCourses(completion: @escaping () -> Void) {
         NetworkManager.shared.fetchData { courses in
@@ -33,5 +37,15 @@ class CourseListViewModel: CourseListViewModelProtocol {
     func cellViewModel(at indexPath: IndexPath) -> CourseTableViewCellViewModelProtocol? {
         let course = courses[indexPath.row]
         return CourseTableViewCellViewModel(course: course)
+    }
+    
+    func selectRow(at indexPath: IndexPath) {
+        self.indexPath = indexPath
+    }
+    
+    func viewModelForSelectedRow() -> CourseDetailsViewModelProtocol? {
+        guard let indexPath = indexPath else {return nil}
+        let course = courses[indexPath.row]
+        return CourseDetailsViewModel(course: course)
     }
 }
