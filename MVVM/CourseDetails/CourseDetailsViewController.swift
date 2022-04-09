@@ -45,7 +45,7 @@ class CourseDetailsViewController: UIViewController {
         guard let imageData = viewModel.imageData else {return}
         courseImage.image = UIImage(data: imageData)
     }
-
+    
     private func setImageForFavoriteButton() {
         favoriteButton.tintColor = isFavorite ? .red : .gray
     }

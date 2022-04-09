@@ -37,7 +37,7 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
     }
     
     var viewModelDidChange: ((CourseDetailsViewModelProtocol) -> Void)?
-
+    
     
     var isFavorite: Bool {
         didSet {
