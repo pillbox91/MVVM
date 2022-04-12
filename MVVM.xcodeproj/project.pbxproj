@@ -17,6 +17,7 @@
 		32315DE427E8B92C00FD5DC1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315DE327E8B92C00FD5DC1 /* DataManager.swift */; };
 		32315DEE27F83EFD00FD5DC1 /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32315DED27F83EFD00FD5DC1 /* CourseListViewModel.swift */; };
 		32442BB127FB8DF8008BD26C /* CourseTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32442BB027FB8DF8008BD26C /* CourseTableViewCellViewModel.swift */; };
+		32442BB4280619EB008BD26C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32442BB3280619EB008BD26C /* Box.swift */; };
 		32943B8C27DB68FD007F22FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32943B8B27DB68FD007F22FC /* AppDelegate.swift */; };
 		32943B8E27DB68FD007F22FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32943B8D27DB68FD007F22FC /* SceneDelegate.swift */; };
 		32943B9527DB68FF007F22FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32943B9427DB68FF007F22FC /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		32315DE327E8B92C00FD5DC1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		32315DED27F83EFD00FD5DC1 /* CourseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
 		32442BB027FB8DF8008BD26C /* CourseTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		32442BB3280619EB008BD26C /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		32943B8827DB68FD007F22FC /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32943B8B27DB68FD007F22FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32943B8D27DB68FD007F22FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			path = CourseTableViewCell;
 			sourceTree = "<group>";
 		};
+		32442BB2280619D2008BD26C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				32442BB3280619EB008BD26C /* Box.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		32943B7F27DB68FD007F22FC = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 		32943B8A27DB68FD007F22FC /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				32442BB2280619D2008BD26C /* Helpers */,
 				32315DEC27F83EA300FD5DC1 /* CourseList */,
 				32315DD427E524FD00FD5DC1 /* CourseDetails */,
 				32315DEB27F6471300FD5DC1 /* ViewControllers */,
@@ -251,6 +262,7 @@
 				32315DE027E8B6F800FD5DC1 /* NetworkManager.swift in Sources */,
 				32943B8C27DB68FD007F22FC /* AppDelegate.swift in Sources */,
 				32315DD627E5256200FD5DC1 /* CourseDetailsViewController.swift in Sources */,
+				32442BB4280619EB008BD26C /* Box.swift in Sources */,
 				32315DE427E8B92C00FD5DC1 /* DataManager.swift in Sources */,
 				32943B8E27DB68FD007F22FC /* SceneDelegate.swift in Sources */,
 			);
